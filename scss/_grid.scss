@@ -63,18 +63,8 @@
 
 .container {
 	width:90%;
-/*width: 1000px;*/
 	max-width:1000px;
 	margin:auto;
-}
-
-.clear {
-	clear:both;
-	display:block;
-	overflow:hidden;
-	visibility:hidden;
-	width:0;
-	height:0;
 }
 
 .clearfix:after {
