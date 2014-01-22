@@ -1,14 +1,14 @@
 <?php
 /**
  * @package WordPress
- * @subpackage larryweber
+ * @subpackage wp_coolkitty
  */
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )
-        $content_width = 640;
+        $content_width = 960;
 
 /**
  * Add jQuery
