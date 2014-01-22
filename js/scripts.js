@@ -1,3 +1,5 @@
+/* @codekit-prepend "jquery.stellar.min.js", "waypoints.min.js", 'jquery.easing.1.3.js'; */
+
 jQuery(document).ready(function ($) {
 
 
