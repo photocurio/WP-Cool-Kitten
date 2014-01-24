@@ -94,7 +94,7 @@ function remove_admin_bar_links() {
         global $wp_admin_bar;
 
         $wp_admin_bar->remove_menu('wp-logo');
-        $wp_admin_bar->remove_menu('my-account');
+        //$wp_admin_bar->remove_menu('my-account');
         $wp_admin_bar->remove_menu('my-sites');
         $wp_admin_bar->remove_menu('comments');
         $wp_admin_bar->remove_menu('search');
