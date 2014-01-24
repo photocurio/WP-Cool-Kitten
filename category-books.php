@@ -19,7 +19,7 @@
 			</div>
 			<?php
 			global $query_string;
-			$nav_query = new WP_Query( $query_string . 'meta_key=sequence&orderby=meta_value_num&order=asc' );
+			$nav_query = new WP_Query( 'cat=3&meta_key=sequence&orderby=meta_value_num&order=asc' );
 			if ( $nav_query->have_posts() ) {
 				echo '<div id="nav" class="grid_9 omega relative"><ul class="navigation">';
 				  while ( $nav_query->have_posts() ) {
@@ -35,7 +35,7 @@
 	<div id="page" class="clearfix relative">
 		
 		<?php global $query_string;
-		$slide_query = new WP_Query( $query_string . 'meta_key=sequence&orderby=meta_value_num&order=asc' );
+		$slide_query = new WP_Query( 'cat=3&meta_key=sequence&orderby=meta_value_num&order=asc' );
 			if ( $slide_query->have_posts() ) : while ( $slide_query->have_posts() ) : $slide_query->the_post(); ?>
 		<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'original' ); ?>
 			<div class="slide" id="slide<?php echo get_the_ID(); ?>" data-slide="<?php echo get_the_ID(); ?>" data-stellar-background-ratio="0.5" style="background-image: url(<?php echo $src[0]; ?>);<?php if ( get_post_meta( get_the_ID(), 'background-color', true ) ) : ?> background-color:<?php echo get_post_meta( get_the_ID(), 'background-color', true ) ?>;<?php endif; ?>" >

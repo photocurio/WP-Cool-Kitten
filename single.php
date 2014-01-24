@@ -20,24 +20,13 @@
 				<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
 				</a></h1>
 			</div>
-			
-			<?php
-			// The Query
-			//global $query_string;
-			//$nav_query = new WP_Query( $query_string );
-			
-			// The Loop
-			if ( have_posts() ) {
-			        echo '<div id="nav" class="grid_9 omega relative"><ul class="navigation">';
-				while ( have_posts() ) {
-					the_post();
-					echo '<li data-slide="'.get_the_ID().'">'.get_the_title().'</li>';
-				}
-			        echo '</ul></div>';
-			} else { ?>
-				<P>Can't find anything</p>
-			<?php } wp_reset_postdata(); ?>
-			
+			<div id="nav" class="grid_9 omega relative">
+				<ul class="navigation">
+					<li><a href="/">Home</a></li>
+					<li><a href="/about-larry/">About Larry</a></li>
+					<li><a href="/category/books/">Larry's Books</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	
@@ -49,7 +38,8 @@
 			<div id="decorative" class="grid_6 ">
 				
 			</div>
-			<div class="grid_6 omega content">
+			<div class="grid_6 omega content" 
+				<?php if ( get_post_meta( get_the_ID(), 'float', true ) ) : ?> style="float:<?php echo get_post_meta( get_the_ID(), 'float', true ) ?>" <?php endif; ?>>
 				<h1><?php the_title(); ?></h1>
 				<?php the_content(); 
 				edit_post_link();

@@ -2,278 +2,340 @@
 Theme Name : WP Cool Kity
 
 */
-
-
 @import 'normalize';
+
 @import 'grid';
-@font-face {
-    font-family: 'QuicksandBold';
-    src: url('fonts/quicksand_bold-webfont.eot?') format('eot'),
-         url('fonts/quicksand_bold-webfont.woff') format('woff'),
-         url('fonts/quicksand_bold-webfont.ttf') format('truetype'),
-         url('fonts/quicksand_bold-webfont.svg#webfontlNcsaplc') format('svg');
-    font-weight: normal;
-    font-style: normal;
 
+@font-face {
+	font-family:'QuicksandBold';
+	src:url('fonts/quicksand_bold-webfont.eot?') format('eot'),url('fonts/quicksand_bold-webfont.woff') format('woff'),url('fonts/quicksand_bold-webfont.ttf') format('truetype'),url('fonts/quicksand_bold-webfont.svg#webfontlNcsaplc') format('svg');
+	font-weight:400;
+	font-style:normal;
 }
 
 @font-face {
-    font-family: 'QuicksandBook';
-    src: url('fonts/quicksand_book-webfont.eot?') format('eot'),
-         url('fonts/quicksand_book-webfont.woff') format('woff'),
-         url('fonts/quicksand_book-webfont.ttf') format('truetype'),
-         url('fonts/quicksand_book-webfont.svg#webfontotIU3rQw') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+	font-family:'QuicksandBook';
+	src:url('fonts/quicksand_book-webfont.eot?') format('eot'),url('fonts/quicksand_book-webfont.woff') format('woff'),url('fonts/quicksand_book-webfont.ttf') format('truetype'),url('fonts/quicksand_book-webfont.svg#webfontotIU3rQw') format('svg');
+	font-weight:400;
+	font-style:normal;
 }
 
 @font-face {
-    font-family: 'Roadgeek2005SeriesCRegular';
-    src: url('fonts/roadgeek_2005_series_c-webfont.eot?') format('eot'),
-         url('fonts/roadgeek_2005_series_c-webfont.woff') format('woff'),
-         url('fonts/roadgeek_2005_series_c-webfont.ttf') format('truetype'),
-         url('fonts/roadgeek_2005_series_c-webfont.svg#webfontT4wfjSWm') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
+	font-family:'Roadgeek2005SeriesCRegular';
+	src:url('fonts/roadgeek_2005_series_c-webfont.eot?') format('eot'),url('fonts/roadgeek_2005_series_c-webfont.woff') format('woff'),url('fonts/roadgeek_2005_series_c-webfont.ttf') format('truetype'),url('fonts/roadgeek_2005_series_c-webfont.svg#webfontT4wfjSWm') format('svg');
+	font-weight:400;
+	font-style:normal;
 }
 
 /* Global */
-
 body {
-	font: 400 1em/1.6 'QuicksandBook', sans-serif;
-	color: #5a5856;
-	background-color:white;
+	font:400 1em/1.6 QuicksandBook,sans-serif;
+	color:#5a5856;
+	background-color:#fff;
 }
+
 img {
-	max-width: 100%;
+	max-width:100%;
 }
-a:link {
-	color: #f68f67;
-	text-decoration: none;
+
+a {
+	color:black;
+	text-decoration:none;
 }
+
 a:hover {
-	color: #bde2df;
-	text-decoration: none;
+	text-decoration:underline;
 }
+
 a:visited {
-	color: #f68f67;
-	text-decoration: none;
 }
 
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roadgeek2005SeriesCRegular';	
+.relative {
+	position:relative;
 }
 
-.relative { position: relative; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+h1,h2 {
+	font-family:'Roadgeek2005SeriesCRegular';
+}
+
+h1 {
+	margin:0;
+	line-height: 1.1;
+}
+
+h2 {
+	margin:0;
+	line-height: 1.2;
+}
+
+h3 {
+	margin:0 0 1em;
+	line-height: 1.3;
+}
+
+h4 {
+	margin:0 0 1.33em;
+	line-height: 1.4;
+}
+
+h5 {
+	margin:0 0 1.67em;
+	line-height: 1.4;
+}
+
+h6 {
+	margin:0 0 2.33em;
+	line-height: 1.4;
+}
+
+abbr[title] {
+	border-bottom:1px dotted;
+}
+
+b,strong {
+	font-weight:700;
+}
+
+blockquote {
+	margin:1em 40px;
+}
+
+dfn {
+	font-style:italic;
+}
+
+mark {
+	background:#ff0;
+	color:#000;
+}
+
+p,pre {
+	margin:0 0 1em;
+}
+
+pre,code,kbd,samp {
+	font-family:monospace,serif;
+	_font-family:'courier new',monospace;
+	font-size:1em;
+}
+
+pre {
+	white-space:pre;
+	white-space:pre-wrap;
+	word-wrap:break-word;
+}
+
+q {
+	quotes:none;
+}
+
+q:before,q:after {
+	content:'';
+	content:none;
+}
+
+small {
+	font-size:75%;
+}
+
+sub,sup {
+	font-size:75%;
+	line-height:0;
+	position:relative;
+	vertical-align:baseline;
+}
+
+sup {
+	top:-.5em;
+}
+
+sub {
+	bottom:-.25em;
+}
+
 /* Header */
 
+#logo {
+	margin: 20px 0;
+}
 
 /* Navigation */
-.logged-in .menu {
-	top:32px;
-}
-.menu {
+
+
+.kitty-menu {
 	position:fixed;
-	top:0px;
-	width:100%; 
-	height:auto; 
-	background-color:#ffffff;
+	top:0;
+	width:100%;
+	height:auto;
+	background-color:#fff;
 	z-index:100;
 }
-#logo {
-	margin: 0;
+.logged-in .kitty-menu {
+	padding-top: 32px;
 }
 #nav {
-	text-align: right;
-	margin: 20px 0 10px;
-    font-family: 'QuicksandBook';
+	text-align:right;
+	margin:20px 0 10px;
+	font-family:'QuicksandBook';
 }
-.navigation{
-	float: right;
-	list-style: none;
-	margin: 0;
+
+.navigation {
+	float:right;
+	list-style:none;
+	margin:0;
 }
-.navigation li{
-	float: left;
+
+.navigation li {
+	float:left;
 	padding:0 0 0 50px;
 }
-.navigation li:hover{
+
+.navigation li:hover {
 	cursor:pointer;
-	color: #a9d3d0;
+	text-decoration: underline;
 }
 
-.navigation .active{
+.navigation .active {
 	cursor:pointer;
-	color: #f68f67;
 }
-
-
-
-
-/* General Slides */ 
-
+#secondary-menu aside{
+	position: absolute;
+	z-index: 50;
+	top: 100px;
+	left: 0;
+}
+.menu-title {
+	font-family:'QuicksandBold';
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+#secondary-menu ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+#secondary-menu li {
+}
+/* General Slides */
 .slide {
-	background-attachment: fixed;
+	background-attachment:fixed;
 	background-size: cover;
 	width:100%;
 	height:100vh;
-	position: relative;
-	padding: 140px 0;
+	position:relative;
+	padding:140px 0;
 }
+
 .slide h1 {
-	font-size: 240%;
-	font-weight: 700;
+	font-size:240%;
+	font-weight:700;
 }
+
 .slide h2 {
 	padding-bottom:20px;
-	font-weight: 400;
+	font-weight:400;
 }
 
-
-
-
-
-
+.content {
+	max-height:75vh;
+	overflow:scroll;
+	background-color:rgba(255,255,255,0.3);
+	padding:1em;
+}
 
 /* Tablet */
 @media screen and (max-width: 1024px) {
-
-#logo {
-	width: 100%;
-	text-align: center;
+	#logo {
+		width:100%;
+		text-align:center;
+		margin: .5em 0 0;
+	}
+	
+	#nav {
+		width:100%;
+		text-align:center;
+		margin: 0 0 10px;
+	}
+	
+	.navigation {
+		width:100%;
+		float:center;
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	
+	.navigation li {
+		float:left;
+		width:25%;
+		padding:0;
+	}
+	
+	.slide {
+		background-attachment:fixed;
+		background-size: auto 100vh;
+		width:100%;
+		position:relative;
+		padding:150px 0;
+	}
+	
+	#decorative {
+		display:none;
+	}
+	
+	#content {
+		text-align:center;
+		width:100%;
+	}
+	
+	.slide h1 {
+		line-height:1em;
+	}
 }
-
-#nav {
-	width:100%;
-	text-align:center;
-	margin:10px 0;
-}
-
-.navigation{
-	width: 100%;
-	float: center;
-	list-style: none;
-	margin: 0;
-	padding:0;
-}
-
-.navigation li{
-	float: left;
-	width:25%;
-	padding:0;
-}
-
-.slide{
-	background-attachment: fixed;
-	width:100%;
-	position: relative;
-	padding:150px 0;
-}
-
-#decorative {
-	display:none;
-}
-
-#content {
-	text-align:center;
-	width:100%;
-}
-
-#slide1 h1 {
-	line-height: 1em;
-}
-#slide1 h2 {
-	line-height: 1em;
-}
-#slide2 h1 {
-	line-height: 1em;
-}
-#slide2 h2 {
-	line-height: 1em;
-}
-#slide3 h1 {
-	line-height: 1em;
-}
-#slide3 h2 {
-	line-height: 1em;
-}
-#slide4 h1 {
-	line-height: 1em;
-}
-#slide4 h2 {
-	line-height: 1em;
-}
-
-}
-
-
-
 
 /* Mobile */
 @media screen and (max-width: 480px) {
-
-#logo {
-	width: 100%;
-	text-align: center;
+	#logo {
+		width:100%;
+		text-align:center;
+	}
+	
+	#nav {
+		width:100%;
+		margin:5px 0;
+	}
+	
+	.navigation {
+		width:100%;
+		float:left;
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	
+	.navigation li {
+		float:left;
+		width:25%;
+	}
+	
+	.slide {
+		background-attachment:fixed;
+		width:100%;
+		position:relative;
+		padding:150px 0;
+	}
+	
+	.slide h1 {
+		line-height:1em;
+	}
+	
+	.slide h2 {
+		line-height:1em;
+	}
 }
-
-#nav {
-	width:100%;
-	margin:5px 0;
-}
-
-.navigation{
-	width: 100%;
-	float: left;
-	list-style: none;
-	margin: 0;
-	padding:0;
-}
-
-.navigation li{
-	float: left;
-	width:25%;
-}
-
-.slide{
-	background-attachment: fixed;
-	width:100%;
-	position: relative;
-	padding:150px 0;
-}
-
-
-#slide1 h1 {
-	line-height: 1em;
-}
-#slide1 h2 {
-	line-height: 1em;
-}
-#slide2 h1 {
-	line-height: 1em;
-}
-#slide2 h2 {
-	line-height: 1em;
-}
-#slide3 h1 {
-	line-height: 1em;
-}
-#slide3 h2 {
-	line-height: 1em;
-}
-#slide4 h1 {
-	line-height: 1em;
-}
-#slide4 h2 {
-	line-height: 1em;
-}
-
-
-}
-
-
-
-

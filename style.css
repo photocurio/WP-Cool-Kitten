@@ -2,6 +2,9 @@
 Theme Name : WP Cool Kity
 
 */
+/* Box sizing added by Peter Mumford */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
 /*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
 /* ============================================================================= HTML5 display definitions ========================================================================== */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; }
@@ -24,47 +27,7 @@ a:focus { outline: thin dotted; }
 
 a:hover, a:active { outline: 0; }
 
-/* ============================================================================= Typography ========================================================================== */
-h1 { margin: 0; }
-
-h2 { margin: 0; }
-
-h3 { margin: 1em 0 0 0; }
-
-h4 { margin: 1.33em 0; }
-
-h5 { margin: 1.67em 0; }
-
-h6 { margin: 2.33em 0; }
-
-abbr[title] { border-bottom: 1px dotted; }
-
-b, strong { font-weight: bold; }
-
-blockquote { margin: 1em 40px; }
-
-dfn { font-style: italic; }
-
-mark { background: #ff0; color: #000; }
-
-p, pre { margin: 1em 0; }
-
-pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
-
-pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
-
-q { quotes: none; }
-
-q:before, q:after { content: ''; content: none; }
-
-small { font-size: 75%; }
-
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-
-sup { top: -0.5em; }
-
-sub { bottom: -0.25em; }
-
+/* Typography moved to style.scss */
 /* ============================================================================= Lists ========================================================================== */
 dl, menu, ol, ul { margin: 1em 0; }
 
@@ -75,7 +38,7 @@ menu, ol, ul { padding: 0 0 0 40px; }
 nav ul, nav ol { list-style: none; list-style-image: none; }
 
 /* ============================================================================= Embedded content ========================================================================== */
-img { border: 0; /* 1 */ -ms-interpolation-mode: bicubic; /* 2 */ }
+img { border: 0; -ms-interpolation-mode: bicubic; }
 
 svg:not(:root) { overflow: hidden; }
 
@@ -85,27 +48,27 @@ figure { margin: 0; }
 /* ============================================================================= Forms ========================================================================== */
 form { margin: 0; }
 
-fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+fieldset { border: 1px solid silver; margin: 0 2px; padding: .35em .625em .75em; }
 
-legend { border: 0; /* 1 */ padding: 0; white-space: normal; /* 2 */ *margin-left: -7px; /* 3 */ }
+legend { border: 0; padding: 0; white-space: normal; *margin-left: -7px; }
 
-button, input, select, textarea { font-size: 100%; /* 1 */ margin: 0; /* 2 */ vertical-align: baseline; /* 3 */ *vertical-align: middle; /* 3 */ }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
 
-button, input { line-height: normal; /* 1 */ }
+button, input { line-height: normal; }
 
-button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; /* 1 */ -webkit-appearance: button; /* 2 */ *overflow: visible; /* 3 */ }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
 
 button[disabled], input[disabled] { cursor: default; }
 
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ *height: 13px; /* 3 */ *width: 13px; /* 3 */ }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *height: 13px; *width: 13px; }
 
-input[type="search"] { -webkit-appearance: textfield; /* 1 */ -moz-box-sizing: content-box; -webkit-box-sizing: content-box; /* 2 */ box-sizing: content-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
 
 button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 
-textarea { overflow: auto; /* 1 */ vertical-align: top; /* 2 */ }
+textarea { overflow: auto; vertical-align: top; }
 
 /* ============================================================================= Tables ========================================================================== */
 table { border-collapse: collapse; border-spacing: 0; }
@@ -147,34 +110,73 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* Mobile */
 @media screen and (max-width: 480px) { .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 { width: 100%; } }
-@font-face { font-family: 'QuicksandBold'; src: url("fonts/quicksand_bold-webfont.eot?") format("eot"), url("fonts/quicksand_bold-webfont.woff") format("woff"), url("fonts/quicksand_bold-webfont.ttf") format("truetype"), url("fonts/quicksand_bold-webfont.svg#webfontlNcsaplc") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'QuicksandBold'; src: url("fonts/quicksand_bold-webfont.eot?") format("eot"), url("fonts/quicksand_bold-webfont.woff") format("woff"), url("fonts/quicksand_bold-webfont.ttf") format("truetype"), url("fonts/quicksand_bold-webfont.svg#webfontlNcsaplc") format("svg"); font-weight: 400; font-style: normal; }
 
-@font-face { font-family: 'QuicksandBook'; src: url("fonts/quicksand_book-webfont.eot?") format("eot"), url("fonts/quicksand_book-webfont.woff") format("woff"), url("fonts/quicksand_book-webfont.ttf") format("truetype"), url("fonts/quicksand_book-webfont.svg#webfontotIU3rQw") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'QuicksandBook'; src: url("fonts/quicksand_book-webfont.eot?") format("eot"), url("fonts/quicksand_book-webfont.woff") format("woff"), url("fonts/quicksand_book-webfont.ttf") format("truetype"), url("fonts/quicksand_book-webfont.svg#webfontotIU3rQw") format("svg"); font-weight: 400; font-style: normal; }
 
-@font-face { font-family: 'Roadgeek2005SeriesCRegular'; src: url("fonts/roadgeek_2005_series_c-webfont.eot?") format("eot"), url("fonts/roadgeek_2005_series_c-webfont.woff") format("woff"), url("fonts/roadgeek_2005_series_c-webfont.ttf") format("truetype"), url("fonts/roadgeek_2005_series_c-webfont.svg#webfontT4wfjSWm") format("svg"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Roadgeek2005SeriesCRegular'; src: url("fonts/roadgeek_2005_series_c-webfont.eot?") format("eot"), url("fonts/roadgeek_2005_series_c-webfont.woff") format("woff"), url("fonts/roadgeek_2005_series_c-webfont.ttf") format("truetype"), url("fonts/roadgeek_2005_series_c-webfont.svg#webfontT4wfjSWm") format("svg"); font-weight: 400; font-style: normal; }
 
 /* Global */
-body { font: 400 1em/1.6 'QuicksandBook', sans-serif; color: #5a5856; background-color: white; }
+body { font: 400 1em/1.6 QuicksandBook,sans-serif; color: #5a5856; background-color: #fff; }
 
 img { max-width: 100%; }
 
-a:link { color: #f68f67; text-decoration: none; }
+a { color: black; text-decoration: none; }
 
-a:hover { color: #bde2df; text-decoration: none; }
-
-a:visited { color: #f68f67; text-decoration: none; }
-
-h1, h2, h3, h4, h5, h6 { font-family: 'Roadgeek2005SeriesCRegular'; }
+a:hover { text-decoration: underline; }
 
 .relative { position: relative; }
 
+/* ============================================================================= Typography ========================================================================== */
+h1, h2 { font-family: 'Roadgeek2005SeriesCRegular'; }
+
+h1 { margin: 0; line-height: 1.1; }
+
+h2 { margin: 0; line-height: 1.2; }
+
+h3 { margin: 0 0 1em; line-height: 1.3; }
+
+h4 { margin: 0 0 1.33em; line-height: 1.4; }
+
+h5 { margin: 0 0 1.67em; line-height: 1.4; }
+
+h6 { margin: 0 0 2.33em; line-height: 1.4; }
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: 700; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+mark { background: #ff0; color: #000; }
+
+p, pre { margin: 0 0 1em; }
+
+pre, code, kbd, samp { font-family: monospace,serif; _font-family: 'courier new',monospace; font-size: 1em; }
+
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+
+q:before, q:after { content: ''; content: none; }
+
+small { font-size: 75%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -.5em; }
+
+sub { bottom: -.25em; }
+
 /* Header */
+#logo { margin: 20px 0; }
+
 /* Navigation */
-.logged-in .menu { top: 32px; }
+.kitty-menu { position: fixed; top: 0; width: 100%; height: auto; background-color: #fff; z-index: 100; }
 
-.menu { position: fixed; top: 0px; width: 100%; height: auto; background-color: #ffffff; z-index: 100; }
-
-#logo { margin: 0; }
+.logged-in .kitty-menu { padding-top: 32px; }
 
 #nav { text-align: right; margin: 20px 0 10px; font-family: 'QuicksandBook'; }
 
@@ -182,9 +184,15 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Roadgeek2005SeriesCRegular'; }
 
 .navigation li { float: left; padding: 0 0 0 50px; }
 
-.navigation li:hover { cursor: pointer; color: #a9d3d0; }
+.navigation li:hover { cursor: pointer; text-decoration: underline; }
 
-.navigation .active { cursor: pointer; color: #f68f67; }
+.navigation .active { cursor: pointer; }
+
+#secondary-menu aside { position: absolute; z-index: 50; top: 100px; left: 0; }
+
+.menu-title { font-family: 'QuicksandBold'; text-transform: uppercase; margin-bottom: 5px; }
+
+#secondary-menu ul { padding: 0; margin: 0; list-style: none; }
 
 /* General Slides */
 .slide { background-attachment: fixed; background-size: cover; width: 100%; height: 100vh; position: relative; padding: 140px 0; }
@@ -193,33 +201,22 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Roadgeek2005SeriesCRegular'; }
 
 .slide h2 { padding-bottom: 20px; font-weight: 400; }
 
+.content { max-height: 75vh; overflow: scroll; background-color: rgba(255, 255, 255, 0.3); padding: 1em; }
+
 /* Tablet */
-@media screen and (max-width: 1024px) { #logo { width: 100%; text-align: center; }
-  #nav { width: 100%; text-align: center; margin: 10px 0; }
+@media screen and (max-width: 1024px) { #logo { width: 100%; text-align: center; margin: .5em 0 0; }
+  #nav { width: 100%; text-align: center; margin: 0 0 10px; }
   .navigation { width: 100%; float: center; list-style: none; margin: 0; padding: 0; }
   .navigation li { float: left; width: 25%; padding: 0; }
-  .slide { background-attachment: fixed; width: 100%; position: relative; padding: 150px 0; }
+  .slide { background-attachment: fixed; background-size: auto 100vh; width: 100%; position: relative; padding: 150px 0; }
   #decorative { display: none; }
   #content { text-align: center; width: 100%; }
-  #slide1 h1 { line-height: 1em; }
-  #slide1 h2 { line-height: 1em; }
-  #slide2 h1 { line-height: 1em; }
-  #slide2 h2 { line-height: 1em; }
-  #slide3 h1 { line-height: 1em; }
-  #slide3 h2 { line-height: 1em; }
-  #slide4 h1 { line-height: 1em; }
-  #slide4 h2 { line-height: 1em; } }
+  .slide h1 { line-height: 1em; } }
 /* Mobile */
 @media screen and (max-width: 480px) { #logo { width: 100%; text-align: center; }
   #nav { width: 100%; margin: 5px 0; }
   .navigation { width: 100%; float: left; list-style: none; margin: 0; padding: 0; }
   .navigation li { float: left; width: 25%; }
   .slide { background-attachment: fixed; width: 100%; position: relative; padding: 150px 0; }
-  #slide1 h1 { line-height: 1em; }
-  #slide1 h2 { line-height: 1em; }
-  #slide2 h1 { line-height: 1em; }
-  #slide2 h2 { line-height: 1em; }
-  #slide3 h1 { line-height: 1em; }
-  #slide3 h2 { line-height: 1em; }
-  #slide4 h1 { line-height: 1em; }
-  #slide4 h2 { line-height: 1em; } }
+  .slide h1 { line-height: 1em; }
+  .slide h2 { line-height: 1em; } }

@@ -124,6 +124,14 @@ function larryweber_widgets_init() {
                 'before_title' => '<h4 class="widget-title">',
                 'after_title' => '</h4>',
         ) );
+        register_sidebar( array (
+                'name' => 'Secondary',
+                'id' => 'secondary',
+                'before_widget' => '<aside id="%1$s" class="widget %2$s" role="complementary">',
+                'after_widget' => "</aside>",
+                'before_title' => '<h4 class="menu-title">',
+                'after_title' => '</h4>',
+        ) );
 }
 add_action( 'init', 'larryweber_widgets_init' );
 
