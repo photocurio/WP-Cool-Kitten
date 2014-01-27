@@ -30,12 +30,13 @@
 			while ( $slide_query->have_posts() ) : 
 			$slide_query->the_post(); ?>
 		
-		<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'original' ); ?>
 		<div class="slide" 
 		id="slide<?php echo get_the_ID(); ?>" 
 		data-slide="<?php echo get_the_ID(); ?>" 
 		data-stellar-background-ratio="0.5" 
-		style="background-image: url(<?php echo $src[0]; ?>);<?php if ( get_post_meta( get_the_ID(), 'background-color', true ) ) : ?> background-color:<?php echo get_post_meta( get_the_ID(), 'background-color', true ) ?>;<?php endif; ?>" >
+		style="<?php if ( get_post_meta( get_the_ID(), 'background-color', true ) ) : ?> background-color:<?php echo get_post_meta( get_the_ID(), 'background-color', true ) ?>;<?php endif; ?>" >
+		<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'original' ); ?>
+		<div class="background-div"><img src="<?php echo $src[0]; ?>"></div>
 						
 			<div class="container clearfix">
 				<div class="grid_6 omega content" 

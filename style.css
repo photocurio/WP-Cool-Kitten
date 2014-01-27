@@ -119,8 +119,6 @@ Theme Name : WP Cool Kity
 /* Global */
 body { font: 400 1em/1.6 QuicksandBook,sans-serif; color: #1c1917; background-color: #fff; }
 
-img { max-width: 100%; }
-
 a { color: #1c1917; text-decoration: none; }
 
 a:hover { text-decoration: underline; }
@@ -206,6 +204,10 @@ sub { bottom: -.25em; }
 .slide h2 { padding-bottom: 20px; font-weight: 400; }
 
 .content { max-height: 80vh; overflow: scroll; background-color: rgba(255, 255, 255, 0.5); padding: 1em; }
+
+.background-div { position: absolute; overflow: hidden; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; }
+
+.background-div img { width: auto; height: auto; min-height: 100%; min-width: 100%; }
 
 /* Tablet */
 @media screen and (max-width: 1024px) { #logo { width: 100%; text-align: center; margin: .5em 0 0; }
