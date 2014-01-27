@@ -1,6 +1,12 @@
 /*
 Theme Name : WP Cool Kitty
-
+Author: Peter Mumford
+Version: 1.0
+Description: This is Jalxob's Cool Kitten Paralax framework formatted as a WordPress theme. 
+* Each "Slide" on the page is a WordPress post.
+* Background images load the Featured Image of the post.  
+* There is no single post view.
+* This theme does not use the WordPress menu system.
 */
 /* Box sizing added by Peter Mumford */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
