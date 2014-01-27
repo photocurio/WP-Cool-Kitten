@@ -20,9 +20,10 @@
 	</div><!-- kitty-menu -->
 	<div id="page" class="clearfix">
 		<div class="secondary-menu-slide">
-			<div class="container relative" id="secondary-menu"><?php dynamic_sidebar('secondary'); ?></div>
+			<!--div class="container relative" id="secondary-menu"><?php //dynamic_sidebar('secondary'); ?></div-->
 		</div>
-		<?php if ( have_posts() ) : 
+		<?php //START THE LOOP
+		if ( have_posts() ) : 
 			while ( have_posts() ) : 
 			the_post(); ?>
 		
@@ -45,7 +46,13 @@
 			</div><!-- CONTAINER -->
 		</div><!-- SLIDE -->
 
-		<?php endwhile; else: ?>
+		<?php endwhile; ?><!-- END OF THE LOOP -->
+		<!-- PAGINATION FUNCTIONS -->
+			<div class="container">
+				<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+				<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+			</div>
+		<?php else: ?>
 			<p>Sorry, we couldn't find any posts.</p>
 		<?php endif; ?>
 		
