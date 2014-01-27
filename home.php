@@ -23,7 +23,7 @@
 	</div><!-- kitty-menu -->
 	<div id="page" class="clearfix">
 		<div class="secondary-menu-slide">
-			<div class="container relative" id="secondary-menu"><?php dynamic_sidebar('secondary'); ?></div>
+			<!--div class="container relative" id="secondary-menu"><?php //dynamic_sidebar('secondary'); ?></div-->
 		</div>
 		<?php $slide_query = new WP_Query( 'cat=2&meta_key=sequence&orderby=meta_value_num&order=asc' );
 			if ( $slide_query->have_posts() ) : 
