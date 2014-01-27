@@ -33,10 +33,9 @@
 		<div class="slide" 
 		id="slide<?php echo get_the_ID(); ?>" 
 		data-slide="<?php echo get_the_ID(); ?>" 
-		data-stellar-background-ratio="0.5" 
-		style="<?php if ( get_post_meta( get_the_ID(), 'background-color', true ) ) : ?> background-color:<?php echo get_post_meta( get_the_ID(), 'background-color', true ) ?>;<?php endif; ?>" >
+		data-stellar-background-ratio="0.5" >
 		<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'original' ); ?>
-		<div class="background-div"><img src="<?php echo $src[0]; ?>"></div>
+		<div class="background-div" style="<?php if ( get_post_meta( get_the_ID(), 'background-color', true ) ) : ?> background-color:<?php echo get_post_meta( get_the_ID(), 'background-color', true ) ?>;<?php endif; ?>"><img src="<?php echo $src[0]; ?>"></div>
 						
 			<div class="container clearfix">
 				<div class="grid_6 omega content" 
