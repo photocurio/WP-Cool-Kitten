@@ -8,11 +8,12 @@ Description: This is Jalxob's Cool Kitten Paralax framework formatted as a WordP
 * There is no single post view.
 * This theme does not use the WordPress menu system.
 */
-/* Box sizing added by Peter Mumford */
+
+/* Box sizing */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 /*! normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
-/* ============================================================================= HTML5 display definitions ========================================================================== */
+/* HTML5 display definitions */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; }
 
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
@@ -21,20 +22,19 @@ audio:not([controls]) { display: none; height: 0; }
 
 [hidden] { display: none; }
 
-/* ============================================================================= Base ========================================================================== */
+/* Base */
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
 html, button, input, select, textarea { font-family: sans-serif; }
 
 body { margin: 0; }
 
-/* ============================================================================= Links ========================================================================== */
+/* Links */
 a:focus { outline: thin dotted; }
 
 a:hover, a:active { outline: 0; }
 
-/* Typography moved to style.scss */
-/* ============================================================================= Lists ========================================================================== */
+/* Lists */
 dl, menu, ol, ul { margin: 1em 0; }
 
 dd { margin: 0 0 0 40px; }
@@ -43,15 +43,15 @@ menu, ol, ul { padding: 0 0 0 40px; }
 
 nav ul, nav ol { list-style: none; list-style-image: none; }
 
-/* ============================================================================= Embedded content ========================================================================== */
+/* Embedded content */
 img { border: 0; -ms-interpolation-mode: bicubic; }
 
 svg:not(:root) { overflow: hidden; }
 
-/* ============================================================================= Figures ========================================================================== */
+/* Figures */
 figure { margin: 0; }
 
-/* ============================================================================= Forms ========================================================================== */
+/* Forms */
 form { margin: 0; }
 
 fieldset { border: 1px solid silver; margin: 0 2px; padding: .35em .625em .75em; }
@@ -76,10 +76,10 @@ button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 
 textarea { overflow: auto; vertical-align: top; }
 
-/* ============================================================================= Tables ========================================================================== */
+/* Tables */
 table { border-collapse: collapse; border-spacing: 0; }
 
-/* Computer */
+/* Desktop Grid */
 .grid_1 { width: 6.5%; }
 
 .grid_2 { width: 15%; }
@@ -114,9 +114,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .clearfix:after { clear: both; content: ''; display: table; }
 
-/* Mobile */
-@media screen and (max-width: 480px) { .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 { width: 100%; } }
-/* ============================================================================= WordPress Core Styles ========================================================================== */
+/* WordPress Core Styles */
 .alignnone { margin: 5px 20px 20px 0; }
 
 .aligncenter, div.aligncenter { display: block; margin: 5px auto 5px auto; }
@@ -147,14 +145,8 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 
 .wp-caption p.wp-caption-text { font-size: 11px; line-height: 17px; margin: 0; padding: 0 4px 5px; }
 
-@font-face { font-family: 'QuicksandBold'; src: url("fonts/quicksand_bold-webfont.eot?") format("eot"), url("fonts/quicksand_bold-webfont.woff") format("woff"), url("fonts/quicksand_bold-webfont.ttf") format("truetype"), url("fonts/quicksand_bold-webfont.svg#webfontlNcsaplc") format("svg"); font-weight: 400; font-style: normal; }
-
-@font-face { font-family: 'QuicksandBook'; src: url("fonts/quicksand_book-webfont.eot?") format("eot"), url("fonts/quicksand_book-webfont.woff") format("woff"), url("fonts/quicksand_book-webfont.ttf") format("truetype"), url("fonts/quicksand_book-webfont.svg#webfontotIU3rQw") format("svg"); font-weight: 400; font-style: normal; }
-
-@font-face { font-family: 'Roadgeek2005SeriesCRegular'; src: url("fonts/roadgeek_2005_series_c-webfont.eot?") format("eot"), url("fonts/roadgeek_2005_series_c-webfont.woff") format("woff"), url("fonts/roadgeek_2005_series_c-webfont.ttf") format("truetype"), url("fonts/roadgeek_2005_series_c-webfont.svg#webfontT4wfjSWm") format("svg"); font-weight: 400; font-style: normal; }
-
 /* Global */
-body { font: 400 1em/1.6 QuicksandBook,sans-serif; color: #1c1917; background-color: #fff; }
+body { font: 400 1em/1.6 helvetica,sans-serif; color: #1c1917; background-color: #fff; }
 
 a { color: #1c1917; text-decoration: none; }
 
@@ -162,8 +154,8 @@ a:hover { text-decoration: underline; }
 
 .relative { position: relative; }
 
-/* ============================================================================= Typography ========================================================================== */
-h1, h2 { font-family: 'Roadgeek2005SeriesCRegular'; color: #565453; }
+/* Typography */
+h1, h2 { color: #565453; }
 
 h1 { margin: 0; line-height: 1.1; }
 
@@ -206,16 +198,18 @@ sup { top: -.5em; }
 sub { bottom: -.25em; }
 
 /* Header */
-#logo { margin: 20px 0 0; text-transform: uppercase; background-color: #fff; }
+#logo { margin: 20px 0 0; background-color: #fff; }
+
+h1#site-title {text-transform: uppercase; font-size: 1em; line-height: 1.6;}
 
 /* Navigation */
 .kitty-menu { position: fixed; top: 0; width: 100%; height: auto; background-color: #fff; z-index: 100; }
 
 .logged-in .kitty-menu { padding-top: 32px; }
 
-#nav { text-align: right; font-family: 'QuicksandBook'; }
+#nav { text-align: right; }
 
-.navigation { float: right; list-style: none; margin: 0; }
+.navigation { float: right; list-style: none; margin: 0; text-transform: lowercase;}
 
 .navigation li { float: left; padding: 0 0 0 50px; }
 
@@ -223,49 +217,45 @@ sub { bottom: -.25em; }
 
 .navigation .active { cursor: pointer; }
 
-.secondary-menu-slide { background-color: white; position: absolute; width: 100%; z-index: 50; top: 65px; }
-
-.menu-title { font-family: 'QuicksandBold'; text-transform: uppercase; margin: 0 20px 0 0; display: inline; }
-
-.menu-books-menu-container { display: inline; }
-
-.widget_nav_menu ul { padding: 0; margin: 0; list-style: none; display: inline; }
-
-.widget_nav_menu li { display: inline; margin-right: 20px; }
-
 .nav-next, .nav-previous { font-style: italic; }
 
 /* General Slides */
-.slide { width: 100%; height: 100vh; position: relative; padding: 140px 0; }
+.slide { width: 100%; height: 100%; height: 100vh; position: relative; padding: 140px 0; }
 
 .slide h1 { font-size: 180%; font-weight: 700; }
 
 .slide h2 { padding-bottom: 20px; font-weight: 400; }
 
-.content { max-height: 80vh; overflow: scroll; background-color: rgba(255, 255, 255, 0.5); padding: 1em; }
+.content { max-height: 80vh; overflow-y: auto; background-color: rgba(255, 255, 255, 0.7); padding: 1em; }
 
 .background-div { position: absolute; overflow: hidden; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; line-height: 0; }
 
 .background-div img { width: auto; height: auto; min-height: 100%; min-width: 100%; }
 
 /* Tablet */
-@media screen and (max-width: 1024px) { #logo { width: 100%; text-align: center; margin: .5em 0 0; }
-  #site-title.grid_3 { width: auto; }
-  #nav { width: 100%; text-align: center; margin: 0 0 10px; }
-  .navigation { width: 100%; float: center; list-style: none; margin: 0; padding: 0; }
-  .navigation li { float: left; width: 25%; padding: 0; }
-  .slide { width: 100%; position: relative; padding: 150px 0; }
-  #decorative { display: none; }
-  #content { text-align: center; width: 100%; }
-  .slide h1 { line-height: 1em; } }
+@media screen and (max-width: 1024px) { 
+	#logo { width: 100%; text-align: center; margin: .5em 0 0; }
+	#site-title.grid_3 { width: auto; }
+	#nav { width: 100%; text-align: center; margin: 0 0 10px; }
+	.navigation { width: 100%; float: center; list-style: none; margin: 0; padding: 0; }
+	.navigation li { float: left; width: 25%; padding: 0; }
+	.slide { width: 100%; position: relative; padding: 150px 0; }
+	#decorative { display: none; }
+	#content { text-align: center; width: 100%; }
+	.slide h1 { line-height: 1em; } 
+}
 /* Mobile */
-@media screen and (max-width: 480px) { #logo { width: 100%; text-align: center; }
-  #nav { width: 100%; margin: 5px 0; }
-  .navigation { width: 100%; float: left; list-style: none; margin: 0; padding: 0; }
-  .navigation li { float: left; }
-  .slide { width: 100%; height: auto; position: relative; padding: 0 0 50px; }
-  .content { max-height: none; }
-  .slide h1 { line-height: 1em; }
-  .slide h2 { line-height: 1em; }
-  .background-div { position: static; }
-  .background-div img { width: 100%; height: auto; min-height: 0; } }
+@media screen and (max-width: 480px) { 
+	#logo { width: 100%; text-align: center; }
+	#nav { width: 100%; margin: 5px 0; }
+	.navigation { width: 100%; float: left; list-style: none; margin: 0; padding: 0; }
+	.navigation li { float: left; }
+	.slide { width: 100%; height: auto; position: relative; padding: 0 0 50px; }
+	.content { max-height: none; }
+	.slide h1 { line-height: 1em; }
+	.slide h2 { line-height: 1em; }
+	.background-div { position: static; }
+	.background-div img { width: 100%; height: auto; min-height: 0; } 
+	/* Mobile Grid */
+	.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 { width: 100%; } 
+}
